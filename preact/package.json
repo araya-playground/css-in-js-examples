@@ -4,9 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon -e ts,tsx -w src --exec node dist/index.js",
-    "build": "babel src -d dist -x .tsx,.ts --delete-dir-on-start --source-maps",
-    "astroturf": "yarn babel src/astroturf -d dist -x .tsx,.ts"
+    "build:astroturf": "babel --config-file ./astroturf/babel.config.js -d astroturf/dist astroturf/src -x .tsx,.ts,.js"
   },
   "dependencies": {
     "babel-loader": "^8.1.0",

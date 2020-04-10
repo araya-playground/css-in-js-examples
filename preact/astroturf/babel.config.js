@@ -3,7 +3,7 @@ module.exports = {
     presets: [
         "@babel/env",
         [
-            "@babel/typescript",
+            "@babel/preset-typescript",
             {
                 jsxPragma: "h"
             }
@@ -21,7 +21,6 @@ module.exports = {
             extension: '.css',
             writeFiles: true,
             getFileName(hostFilePath, opts) {
-                console.log(hostFilePath)
                 const basePath = path.join(__dirname, 'dist', 'sample');
                 return `${basePath}-extracted_style${opts.extension}`
             }
