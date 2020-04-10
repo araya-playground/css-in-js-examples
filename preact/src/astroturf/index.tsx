@@ -1,8 +1,7 @@
 import {FunctionComponent, h} from "preact";
 import fastify from "fastify";
 import render from 'preact-render-to-string';
-import {CardWithEmotion} from "./emotion";
-import {extractCritical, renderStylesToString} from "emotion-server";
+import {CardWithAstroturf} from "./card";
 
 const server = fastify({});
 const App: FunctionComponent = props => {
@@ -24,17 +23,9 @@ const App: FunctionComponent = props => {
     );
 };
 
-// server.get("/styled-components", (request, reply) => {
-//     reply.type("text/html");
-//     const html = render(sheet.collectStyles(<App><CardWithStyledComponents/></App>));
-//     console.log(sheet.getStyleTags()); // <style ....> .... </style>
-//     reply.send(html);
-// });
-server.get("/emotion", (request, reply) => {
+server.get("/astroturf", (request, reply) => {
     reply.type("text/html");
-    const {html ,css } = extractCritical(render(<App><CardWithEmotion /></App>));
-    console.log(html, css)
-    reply.send(html);
+    reply.send(render(<App><CardWithAstroturf/></App>))
 });
 server.listen(3000, (err, address) => {
     if (err) throw err;
