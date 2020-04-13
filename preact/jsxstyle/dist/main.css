@@ -1,0 +1,16 @@
+/* ./jsxstyle/src/card.tsx:6-12 (Box) */
+._x0 {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  height: 400px;
+  padding: 20px;
+  width: 300px;
+}
+/* ./jsxstyle/src/card.tsx:14-19 (Inline) */
+._x1 {
+  color: #6450a1;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 1em;
+}
+
