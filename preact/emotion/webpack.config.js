@@ -19,16 +19,16 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCSSExtractPlugin.loader, "astroturf/css-loader"],
+        use: [MiniCSSExtractPlugin.loader],
       },
       {
         test: /\.jsx?$/,
-        use: ["babel-loader", "astroturf/loader"],
+        use: ["babel-loader"],
       },
       // astroturf works out of the box with typescript (.ts or .tsx files).
       {
         test: /\.tsx?$/,
-        use: ["babel-loader", "astroturf/loader"],
+        use: ["babel-loader"],
       },
     ],
   },

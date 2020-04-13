@@ -23,7 +23,7 @@ const App: FunctionComponent = props => {
     );
 };
 
-server.get("/astroturf", (request, reply) => {
+server.get("/", (request, reply) => {
     reply.type("text/html");
     reply.send(render(<App><CardWithAstroturf/></App>))
 });
