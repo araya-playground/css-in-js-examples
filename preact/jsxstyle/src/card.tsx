@@ -16,8 +16,9 @@ export const CardWithJsxstyle: FunctionComponent = () => {
           font-size="2rem"
           display="inline-block"
           margin="1em"
+          component={"h2"}
         >
-          <span>Card Example</span>
+            Card Example
         </Inline>
       </div>
     </Box>
