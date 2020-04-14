@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:astroturf": "babel --config-file ./astroturf/babel.config.js -d astroturf/dist astroturf/src -x .tsx,.ts,.js",
+    "build:astroturf": "webpack --config ./astroturf/webpack.config.js",
     "build:jsxstyle": "webpack --config ./jsxstyle/webpack.config.js"
   },
   "dependencies": {

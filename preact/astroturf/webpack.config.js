@@ -1,11 +1,12 @@
 const path = require("path");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
   mode: process.env.NODE_ENV || "development",
   target: "node",
-  entry: path.resolve("src/index.tsx"),
+  entry: path.join(__dirname, "src/index.tsx"),
   output: {
-    path: path.join(path.cwd(), "dist"),
+    path: path.join(__dirname, "dist"),
     filename: "[name].js",
   },
   resolve: {
@@ -20,10 +21,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCSSExtractPlugin.loader, "astroturf/css-loader"],
-      },
-      {
-        test: /\.jsx?$/,
-        use: ["babel-loader", "astroturf/loader"],
       },
       // astroturf works out of the box with typescript (.ts or .tsx files).
       {
