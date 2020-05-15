@@ -1,6 +1,6 @@
 import { css } from "linaria";
 
-const cardBackground = "#FAA3A3";
+export const defaultCardBgColor = "#FAA3A3";
 export const globals = css`
   :global() {
     :root {
@@ -16,7 +16,7 @@ export const globals = css`
         align-items: center;
     }
     .common-card__red {
-      background: ${cardBackground};
+      background: ${defaultCardBgColor};
     }
   }
 `;

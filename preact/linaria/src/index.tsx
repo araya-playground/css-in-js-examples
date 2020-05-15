@@ -21,9 +21,7 @@ const App: FunctionComponent = (props) => {
         <link rel="stylesheet" href="./styles.css" />
       </head>
       <body>
-        <div className="container container__flex-center">
-          {props.children}
-        </div>
+        <div className="container container__flex-center">{props.children}</div>
       </body>
     </html>
   );
@@ -37,6 +35,7 @@ server.get("/", async (req, reply) => {
     render(
       <App>
         <CardWithLinaria />
+        <CardWithLinaria bgColor="#9999EE"/>
       </App>
     )
   );

@@ -1,5 +1,6 @@
 import { FunctionComponent, h } from "preact";
 import { css } from "linaria";
+import { defaultCardBgColor } from "./global-styles";
 
 const cardStyle = css`
   display: inline-block;
@@ -11,9 +12,18 @@ const cardTitleStyle = css`
   color: #6450a1;
   font-size: 2rem;
 `;
-export const CardWithLinaria: FunctionComponent = () => {
+
+type Props = {
+  bgColor?: string;
+};
+export const CardWithLinaria: FunctionComponent<Props> = ({
+  bgColor,
+}: Props) => {
   return (
-    <div className={`${cardStyle} common-card__red`}>
+    <div
+      className={`${cardStyle} common-card__red`}
+      style={{ "background-color": bgColor ?? defaultCardBgColor }}
+    >
       <span className={cardTitleStyle}>Card Example</span>
     </div>
   );
