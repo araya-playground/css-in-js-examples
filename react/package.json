@@ -8,7 +8,7 @@
     "build": "tsc"
   },
   "dependencies": {
-    "fastify": "^2.13.0"
+    "fastify": "^2.15.1"
   },
   "devDependencies": {
     "@emotion/core": "^10.0.28",
