@@ -25,7 +25,7 @@
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
     "fastify": "^2.13.0",
-    "fastify-static": "^2.7.0",
+    "fastify-static": "^4.2.4",
     "jsxstyle": "^2.3.1",
     "jsxstyle-webpack-plugin": "^1.3.1",
     "linaria": "^1.3.3",
